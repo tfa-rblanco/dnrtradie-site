@@ -76,7 +76,7 @@ const App = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h2>DNR Tradie: Experts You Can Trust</h2>
+        <h2>Experts You Can Trust</h2>
         <div className="hero-content">
           <h4>About Us</h4>
           <p>
