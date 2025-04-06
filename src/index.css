@@ -266,6 +266,7 @@ body {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 1.1rem;
 }
 
 .form-group {
@@ -321,6 +322,22 @@ body {
   color: green;
   margin-bottom: 1rem;
   font-weight: bold;
+}
+
+button[type="submit"] {
+  background-color: #0077b6; /* Deep blue to match heading */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #005f8d; /* Slightly darker on hover */
 }
 
 /* Responsive Mobile Navigation */
@@ -458,7 +475,7 @@ body {
 
 .form-actions .primary,
 .form-actions .secondary {
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   border: none;
   font-weight: bold;

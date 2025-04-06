@@ -113,10 +113,11 @@ const FreeQuote = () => {
           className={`full-width ${errors.phone ? 'error' : ''}`}
         />
         <div className="form-group">
-          <label>Tell us a little more about the work</label>
+          <h4>Tell us a little more about the work</h4>
           <textarea
             name="message"
             rows="4"
+            className="full-width"
             placeholder="Give us a general idea"
             value={formData.message}
             onChange={handleChange}
