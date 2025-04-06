@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TawkMessenger from "./TawkMessenger";
+import FreeQuoteBanner from "./component/FreeQuote";
 import "./index.css";
 
 const services = [
@@ -27,12 +28,10 @@ const testimonials = [
 ];
 
 
-
-
-
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showFreeQuote, setShowFreeQuote] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -41,6 +40,14 @@ const App = () => {
   
     return () => clearInterval(interval);
   }, []);
+
+  const handleServicesClick = () => {
+    setShowFreeQuote(true);
+    const target = document.getElementById("free-quote");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
@@ -121,10 +128,14 @@ const App = () => {
         <div className="service-grid">
           {services.map((service, idx) => (
             <div className="service-item" key={idx}>
-              <h4>{service}</h4>
+              <h4 onClick={handleServicesClick}>{service}</h4>
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="testimonials" id="free-quote">
+        {showFreeQuote && <FreeQuoteBanner />}
       </section>
 
       <section className="testimonials">
@@ -134,9 +145,9 @@ const App = () => {
           <p className="author">— {testimonials[currentIndex].author}</p>
         </div>
       </section>
-
+      <section className="testimonials">
       <TawkMessenger />
-
+      </section>
       <footer className="footer" id="contact">
         <p>&copy; 2025 DFC Brickwork. All rights reserved.</p>
       </footer>
