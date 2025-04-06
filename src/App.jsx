@@ -86,7 +86,7 @@ const App = () => {
             and expert craftsmanship for residential and commercial projects alike.
           </p>
 
-          <h4>Our Founders</h4>
+          <h4>Our Friendly Staff</h4>
           <strong>Declan Cullen – Tradesman & Brickwork Expert</strong>
           <p>
             Declan is a seasoned tradie with more than two decades of hands-on experience

@@ -311,3 +311,10 @@ body {
     font-size: 1.75rem;
   }
 }
+
+iframe[title="chat widget"],
+iframe[src*="tawk.to"] {
+  background-color: white !important;
+  z-index: 9999 !important;
+  border: none !important;
+}

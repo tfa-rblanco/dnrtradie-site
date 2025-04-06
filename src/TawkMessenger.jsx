@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 
 const TawkMessenger = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://embed.tawk.to/67f1ceb387b120190b78be66/1io48us5i";
-    script.async = true;
-    script.charset = "UTF-8";
-    script.setAttribute("crossorigin", "*");
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+    useEffect(() => {
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+        (function () {
+          var s1 = document.createElement("script");
+          s1.async = true;
+          s1.src = "https://embed.tawk.to/67f1ceb387b120190b78be66/1io48us5i";
+          s1.charset = "UTF-8";
+          s1.setAttribute("crossorigin", "*");
+          document.body.appendChild(s1);
+        })();
+      }, []);    
 
   return null;
 };
