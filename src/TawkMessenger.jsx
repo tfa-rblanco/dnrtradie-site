@@ -1,20 +1,33 @@
 import { useEffect } from "react";
 
 const TawkMessenger = () => {
-    useEffect(() => {
-        var Tawk_API = Tawk_API || {};
-        var Tawk_LoadStart = new Date();
-        (function () {
-          var s1 = document.createElement("script");
-          s1.async = true;
-          s1.src = "https://embed.tawk.to/67f1ceb387b120190b78be66/1io48us5i";
-          s1.charset = "UTF-8";
-          s1.setAttribute("crossorigin", "*");
-          document.body.appendChild(s1);
-        })();
-      }, []);    
+  useEffect(() => {
+    // Define global variables
+    window.Tawk_API = window.Tawk_API || {};
+    window.Tawk_LoadStart = new Date();
 
-  return null;
+    // Create and insert the Tawk.to script
+    const script = document.createElement("script");
+    script.src = "https://embed.tawk.to/67f1ceb387b120190b78be66/1io48us5i";
+    script.async = true;
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    document.body.appendChild(script);
+
+    // Hide the widget once it loads
+    script.onload = () => {
+      if (window.Tawk_API && window.Tawk_API.onLoad) {
+        window.Tawk_API.onLoad = function () {
+          window.Tawk_API.hide();
+        };
+      }
+    };
+
+    return () => {
+      document.body.removeChild(script); // Clean up on unmount
+    };
+  }, []);
 };
+
 
 export default TawkMessenger;
