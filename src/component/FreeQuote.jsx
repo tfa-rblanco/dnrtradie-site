@@ -52,7 +52,6 @@ const FreeQuote = () => {
           to: 'dfc@testforce.com'
         })
       });
-      alert('Your message has been sent!');
       setFormData({
         firstName: '',
         lastName: '',
@@ -143,7 +142,7 @@ const FreeQuote = () => {
         </div>
         <button type="submit" className="primary">Submit</button>
         {isSubmitted && (
-            <div className="success-message">Your inquiry has been send. We'll get back to you soon. Thank you!</div>
+            <div className="success-message">Your inquiry has been sent. We'll get back to you soon. Thank you!</div>
         )}
       </form>
     </section>
