@@ -67,13 +67,31 @@ const FreeQuote = () => {
   };
 
   return (
-    <section className="free-quote-form-container" id="free-quote">
+    <section
+      className="free-quote-form-container"
+      id="free-quote"
+      style={{
+        backgroundImage: "url('/declan-on-the-go.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+        opacity: 0.8,
+        zIndex: 1
+      }}
+    >
+    <div style={{
+      backgroundColor: 'rgba(255, 255, 255, 0.85)',
+      padding: '2rem',
+      borderRadius: '12px',
+      zIndex: 2
+      }}>
       <h2 style={{ textAlign: 'center', color: '#004e7c', marginBottom: '1rem' }}>
-        Get a FREE Quote for your next project!
+          Get a FREE Quote for your next project!
       </h2>
-
+    </div>
       <form onSubmit={handleSubmit}>
-        <h4>Your Details</h4>
+        <h4 style={{ textAlign: 'center', color: '#000000', marginBottom: '1rem' }}>Your Details</h4>
         <div className="form-grid">
           <input
             name="firstName"
@@ -113,7 +131,7 @@ const FreeQuote = () => {
           className={`full-width ${errors.phone ? 'error' : ''}`}
         />
         <div className="form-group">
-          <h4>Tell us a little more about the work</h4>
+          <h4 style={{ textAlign: 'center', color: '#000000', marginBottom: '1rem' }}>Tell us a little more about the work</h4>
           <textarea
             name="message"
             rows="4"
