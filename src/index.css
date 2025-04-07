@@ -261,12 +261,17 @@ body {
 }
 
 .full-width {
+  background-color: rgba(255, 255, 255, 0.7);
   width: 100%;
   margin-top: 1rem;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1.1rem;
+}
+
+.full-width:focus {
+  background-color: rgba(255, 255, 255, 1); 
 }
 
 .form-group {
